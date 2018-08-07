@@ -160,6 +160,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = restaurant.name;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
@@ -198,14 +199,21 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
 
+// add service worker
+//source: https://www.youtube.com/watch?time_continue=2772&v=jsGs9z7TuyY
+if ('serviceworker' in navigator) {
+	navigator.serviceworker.register('./sw.js')
+	.then((reg) => {
+		if(reg.installing) {
+			console.log('Service worker installing');
+		} else if(reg.waiting) {
+			console.log('Service worker installed');
+		} else if(reg.active) {
+			console.log('Service worker active');
+		}
+		console.log('Registration succeeded. Scope is ' + reg.scope);
+		}).catch((error) => {
+			console.log('Registration failed with '+error);
+		});
+}
