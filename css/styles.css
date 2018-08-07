@@ -216,7 +216,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -256,6 +256,8 @@ nav h1 a {
 #reviews-container {
   display: flex;
   flex-direction: column;
+  width: 40%;
+
 }
 #reviews-container h2 {
   color: #f58500;
@@ -284,6 +286,7 @@ nav h1 a {
 }
 #reviews-list li p {
   margin: 0 0 10px;
+  align-self: center;
 }
 #restaurant-hours td {
   color: #666;
