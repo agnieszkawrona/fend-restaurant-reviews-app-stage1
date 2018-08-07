@@ -3,6 +3,14 @@
 ### Initial commit provided by Udacity:
 https://github.com/udacity/mws-restaurant-stage-1
 
+### How to run?
+- Download the project
+- For this project, you need to set up a simple HTTP server to serve up the site files on your local computer. Here's how you can use python for that purpose:
+  - In a terminal, check the version of Python you have: python --version.
+      For Python 2.x type in: -m SimpleHTTPServer 8000 (or some other port, if port 8000 is already in use.) 
+      For Python 3.x type in: python3 -m http.server 8000.
+    If you don't have Python installed, navigate to Python's website to download and install the software.
+- With your server running, visit the site: http://localhost:8000.
 
 ---
 ## Project Overview: Stage 1
