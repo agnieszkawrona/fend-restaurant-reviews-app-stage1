@@ -9,27 +9,25 @@
 </head>
 
 <body>
-  <header tabindex="0">
+  <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent" tabindex="1">
+  <main id="maincontent">
     <section id="map-container">
       <div id="map"></div>
     </section>
-    <section tabindex="2">
+    <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="3">
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-		<label for="neighborhoods-select">Neighborhood Select</label>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex="4">
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
-		<label for="cuisines-select">Cuisines Select</label>
       </div>
       <ul id="restaurants-list"></ul>
     </section>
@@ -40,7 +38,7 @@
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
 
-  <footer id="footer" tabindex="5">
+  <footer id="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
